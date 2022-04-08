@@ -44,4 +44,17 @@ class SinglyLInkedList {
     }
     return current;
   }
+
+  // method to remove first item (head) in the list 
+  shift() {
+    if (this.head === null) return undefined;
+    let currentHead = this.head;
+    this.head = currentHead.next;
+    this.length--;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+    return currentHead;
+  }
 }
